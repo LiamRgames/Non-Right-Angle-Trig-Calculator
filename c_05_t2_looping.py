@@ -50,8 +50,6 @@ def number_checker(question):
 
     while True:
         response = input(question).lower()
-        if response == '':
-            return response
         try:
             response = float(response)
 
@@ -108,7 +106,7 @@ while True:
             if A + B >= 180:
                 print("That number is too large")
                 continue
-            side_length = a/math.sin(math.radians(A)) * math.sin(math.radians(B))
+            side_length = (a/math.sin(math.radians(A))) * math.sin(math.radians(B))
         else:
             b = number_checker(f"b: ")
             c = number_checker(f"c: ")
@@ -125,7 +123,7 @@ while True:
             a = number_checker(f"a: ")
             b = number_checker(f"b: ")
             B = number_checker(f"B: ")
-            sin_check = math.sin(math.radians(B)) / b * a
+            sin_check = (math.sin(math.radians(B)) / b) * a
             if B >= 180:
                 print("That number is too large")
                 continue
@@ -138,7 +136,7 @@ while True:
             a = number_checker(f"a: ")
             b = number_checker(f"b: ")
             c = number_checker(f"c: ")
-            cos_check = b**2 + c**2 - a**2 / 2 * b * c
+            cos_check = (b**2 + c**2 - a**2) / (2 * b * c)
             if -1 <= cos_check <= 1:
                 angle = math.degrees(math.acos(cos_check))
             else:
