@@ -150,7 +150,7 @@ while True:
                     graph_side_lengths[key] = sine_angle_values[key]
                 else:
                     graph_angles[key] = sine_angle_values[key]
-            sin_check = (math.sin((math.radians(sine_angle_values["B"])) / sine_angle_values["b"]) * sine_angle_values["a"])
+            sin_check = (math.sin(math.radians(sine_angle_values["B"])) / sine_angle_values["b"]) * sine_angle_values["a"]
             if sine_angle_values["B"] >= 180:
                 print("That angle is too large")
                 continue
