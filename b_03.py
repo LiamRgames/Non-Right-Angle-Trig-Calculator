@@ -207,7 +207,7 @@ while True:
     if graph_angles["C"] != -1:
         plt.annotate(f"{graph_angles["C"]:.1f}°", (-5, 7.5), textcoords="offset points", xytext=(-8, -30))
 
-    # Limits
+    #Limits
     plt.xlim((-10, 0))
     plt.ylim((0, 10))
 
@@ -226,7 +226,7 @@ while True:
         if graph_angles[i] == -1:
             del graph_angles[i]
 
-    #Link to plot
+    #Link to Plot
     html_plot_view = f'<a href="{unique_file_name}">View Plot</a>'
 
     #File Information
